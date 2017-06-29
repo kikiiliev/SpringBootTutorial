@@ -40,4 +40,9 @@ public class TopicController {
 	public void deleteTopic(@PathVariable String id){
 		topicService.deleteTopic(id);
 	}
+	
+	@RequestMapping("/topics/by-description/{description}")
+	public Topic getTopicByDescription(@PathVariable String description) {
+		return topicService.getTopicByDescription(description);
+	}
 }
